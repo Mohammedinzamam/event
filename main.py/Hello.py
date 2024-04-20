@@ -1,11 +1,11 @@
 import streamlit as st
 def main():
-    st.title("Event Showcase")
+    st.title("Events Update")
 
     st.subheader("Events")
     img=[['/workspaces/event/image/eveimage.webp', '/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp'],['/workspaces/event/image/eveimage.webp', '/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp'],['/workspaces/event/image/eveimage.webp', '/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp'],['/workspaces/event/image/eveimage.webp', '/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp','/workspaces/event/image/eveimage.webp']]
     Date=[['2024-04-20', '2024-04-21', '2024-04-22', '2024-04-23'],['2024-04-20', '2024-04-21', '2024-04-22', '2024-04-23'],['2024-04-20', '2024-04-21', '2024-04-22', '2024-04-23'],['2024-04-20', '2024-04-21', '2024-04-22', '2024-04-23']]
-    loc=[['Location A', 'Location B','Location C', 'Location D'],['Location A', 'Location B','Location C', 'Location D'],['Location A', 'Location B','Location C', 'Location D'],['Location A', 'Location B','Location C', 'Location D']]
+    loc=[['chennai', 'tiruchi','tenkasi', 'ooty'],['madurai', 'theni','Location C', 'Location D'],['Location A', 'Location B','Location C', 'Location D'],['Location A', 'Location B','Location C', 'Location D']]
     c=1
     j=0
     for f in range(4):
@@ -21,10 +21,10 @@ def main():
             with col5:
                 if f==0:
                     if st.button("View More", key="home_button"):
-                        st.write("hello")
+                        st.switch_page("/workspaces/event/main/page1.py")
                 elif f==1:
                     if st.button("View More", key="home_button2"):
-                        st.markdown("[Home Page](http://localhost:8501/home)")
+                        st.switch_page("/workspaces/event/page2.py")
                 elif f==2:
                     if st.button("View More", key="home_button3"):
                         st.markdown("[Home Page](http://localhost:8501/home)")
